@@ -102,7 +102,7 @@ data = [
 def index():
     return jsonify("hello")
 
-@app.route("/pdf/<int:id>", methods=['get'])
+@application.route("/pdf/<int:id>", methods=['get'])
 def pdf(id):
     pdf = mkPdf()
     pdf.rstName = "My rst"

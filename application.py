@@ -3,7 +3,7 @@ from fpdf import FPDF
 import datetime
 import os
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 data = [
@@ -34,13 +34,13 @@ data = [
 ]
 
 
-@app.route('/')
+@application.route('/')
 def index():
     return "hello"
 
 
 
-@app.route("/fetch", methods=['get'])
+@application.route("/fetch", methods=['get'])
 def get():
     return jsonify(data)
 
